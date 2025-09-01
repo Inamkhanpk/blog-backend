@@ -18,6 +18,15 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors());
+app.use(
+  cors({
+    origin: [
+      process.env.FRONTEND, // deployed frontend
+    ],
+    credentials: true, // if you are sending cookies or auth headers
+  })
+);
+
 app.use(morgan("dev"));
 app.use(helmet());
 
