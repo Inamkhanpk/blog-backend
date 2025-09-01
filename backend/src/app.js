@@ -17,14 +17,11 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(
-  cors({
-    origin: [
-      process.env.FRONTEND, // deployed frontend
-    ],
-    credentials: true, // if you are sending cookies or auth headers
-  })
-);
+app.use(cors({
+  origin: "https://blog-frontend-gamma-taupe.vercel.app",
+  methods: ["GET","POST","PUT","DELETE","OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 app.use(morgan("dev"));
 app.use(helmet());
