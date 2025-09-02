@@ -19,7 +19,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: "*", // frontend domain
+  origin: process.env.FRONTEND, // frontend domain
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
 }));
