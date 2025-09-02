@@ -51,12 +51,14 @@ export default function Home() {
           </div>
 
           {/* Pagination */}
+          <div className="absolute bottom-0 left-0 w-full  text-white p-4 text-center">
           <Pagination
             page={data.page}
             pages={data.pages}
             onPrev={() => setPage((p) => Math.max(1, p - 1))}
             onNext={() => setPage((p) => Math.min(data.pages, p + 1))}
           />
+          </div>
         </>
       )}
     </div>
