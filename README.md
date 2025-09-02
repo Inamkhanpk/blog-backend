@@ -36,7 +36,7 @@ The app supports authentication, role-based dashboards, and CRUD operations for 
 ## Clone Repo
 ## For Backend
 
-### git clone https://github.com/your-username/blog-app.git
+### git clone https://github.com/Inamkhanpk/blog-management.git
 
 ### cd backend
 
@@ -51,17 +51,17 @@ The app supports authentication, role-based dashboards, and CRUD operations for 
 
 ### npm start
 
-## Run backend on http://localhost:5000
+### Run backend on http://localhost:5000
 
 ## For Frontend
 
-## cd frontend
+### cd frontend
 
-## npm install
+### npm install
 
 ## Environment variable for frontend after making .env file in root folder
-## REACT_APP_BASE_API_URL=http://localhost:5000/api
+### REACT_APP_BASE_API_URL=http://localhost:5000/api
 
-## npm start
+### npm start
 
-## Run frontend on http://localhost
+### Run frontend on http://localhost:3000
