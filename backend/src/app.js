@@ -19,11 +19,11 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: "https://blog-frontend-gamma-taupe.vercel.app", // frontend domain
+  origin: "*", // frontend domain
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
 }));
-app.options("*", cors());
+
 app.use(morgan("dev"));
 app.use(helmet());
 
