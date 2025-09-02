@@ -18,9 +18,12 @@ const app = express();
 // Middleware
 app.use(express.json());
 
-
-app.use(cors({ origin: "https://blog-frontend-gamma-taupe.vercel.app", credentials: true }));
-
+app.use(cors({
+  origin: "https://blog-frontend-gamma-taupe.vercel.app", // frontend domain
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  credentials: true
+}));
+app.options("*", cors());
 app.use(morgan("dev"));
 app.use(helmet());
 
